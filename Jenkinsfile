@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('node3') {
+      steps {
+        echo 'node3 success'
+      }
+    }
+
   }
 }
