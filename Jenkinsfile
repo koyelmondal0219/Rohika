@@ -21,7 +21,16 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh './mvnw clean compile'
+        sh '''pipeline { 
+    agent any  
+    stages { 
+        stage(\'Build\') { 
+            steps { 
+               echo \'This is a minimal pipeline.\' 
+            }
+        }
+    }
+}'''
       }
     }
 
