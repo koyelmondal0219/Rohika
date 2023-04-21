@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('node4') {
+      steps {
+        echo 'node 4 success'
+      }
+    }
+
   }
 }
